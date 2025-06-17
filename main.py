@@ -208,13 +208,13 @@ def two_layer_neural_network(x_train, y_train,x_test,y_test, num_iterations):
     parameters = initialize_parameters_and_layer_sizes_NN(x_train, y_train)
 
     for i in range(0, num_iterations):
-         # forward propagation
+        # forward propagation
         A2, cache = forward_propagation_NN(x_train,parameters)
         # compute cost
         cost = compute_cost_NN(A2, y_train, parameters)
-         # backward propagation
+        # backward propagation
         grads = backward_propagation_NN(parameters, cache, x_train, y_train)
-         # update parameters
+        # update parameters
         parameters = update_parameters_NN(parameters, grads)
         
         if i % 100 == 0:
